@@ -1,0 +1,842 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Body Styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    min-height: 100vh;
+    background-color: #000; /* Fallback in case the video doesn't load */
+  }
+  
+  /* Section Styling */
+  section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+  }
+  
+  #Home .john h1, #Home .john h2 {
+    color: white; /* Make text color white */
+  }
+  
+  #Home .john h1 {
+    font-size: 48px; /* Set h1 to 48px */
+  }
+  
+  #Home .john h2 {
+    font-size: 32px; /* Set h2 to 32px (smaller than h1) */
+  }
+  
+  /* Optional: Make sure text is aligned nicely */
+  #Home .john {
+    text-align: center; /* Center the text horizontally */
+    padding: 20px; /* Optional padding */
+  }
+  
+  .aboutme {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .profile-info-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+  }
+  
+  .profile-info {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Optional: add a translucent background */
+    border-radius: 10px; /* Optional: rounded corners */
+    color: white;
+  }
+  
+  .profile-info img {
+    display: block;
+    margin: 0 auto 20px; /* Center the image and add spacing */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover;
+  }
+  
+  .center-heading-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .team-heading {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Optional shadow for text */
+    margin: 0;
+  }
+  
+  .text {
+    margin: 20px; /* Remove any default margins */
+  }
+  
+  /* Video Background */
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .main-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .main-content p {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 5px 0;
+  }
+  
+  .picture-wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .picture-wrapper img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .picture-wrapper img:hover {
+    box-shadow: 0 0 20px rgba(8, 249, 189, 0.8), 0 0 40px #08f9bd99;
+  }
+  
+  /* Social Media Wrapper */
+  .socials-wrapper a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    display: inline-flex; /* Use flex for better alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 40px; /* Ensure consistency */
+    height: 40px;
+    border-radius: 50%; /* Makes the icon round */
+    background-color: #000; /* Optional background color */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .socials-wrapper h1 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .socials-wrapper a {
+    margin: 0 10px; /* Space between icons */
+    text-decoration: none;
+    display: inline-flex; /* Centers content within the circle */
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Circle size */
+    height: 50px;
+    border-radius: 50%; /* Makes the parent a perfect circle */
+    background-color: transparent; /* Remove black background */
+    border: 2px solid white; /* Add a clean white border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .socials-wrapper a img {
+    width: 60%; /* Adjust the logo size */
+    height: 60%; /* Adjust the logo size */
+    object-fit: contain; /* Ensure proper scaling */
+    display: block;
+    filter: brightness(0) invert(1); /* Make the logos white */
+  }
+  
+  
+  .socials-wrapper a:hover img {
+    transform: scale(1.1);
+    filter: brightness(0) invert(1) drop-shadow(0 0 10px #08f9bd);
+  }
+  
+  .socials-wrapper a:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 0 10px rgba(8, 249, 189, 0.8); /* Glow effect */
+  }
+  
+  
+  /* Skill Bar */
+  .skill-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    margin: 10px 0;
+  }
+  
+  .skill-level {
+    height: 100%;
+    background-color: rgb(8, 249, 189);
+    width: 0;
+    animation: fillBar 2s forwards;
+  }
+  
+  @keyframes fillBar {
+    to {
+      width: 90%;
+    }
+  }
+  
+  nav {
+    background-image: linear-gradient(to right, #474449, #2D232E);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* General Navbar Styling */
+  nav {
+      display: flex;
+      justify-content: space-between; /* Spaces the logo and the navigation items */
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #333; /* Example background */
+  }
+  
+  nav ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      margin-left: auto; /* This pushes the ul to the right */
+  }
+  
+  nav ul li {
+      margin-left: 20px; /* Adds space between navigation items */
+  }
+  
+  /* Logo Styling */
+  nav ul li a img {
+      height: 30px; /* Adjust logo height to 30px */
+      width: auto; /* Keep aspect ratio */
+      display: block;
+  }
+  
+  /* Navbar Links Styling */
+  nav ul li a {
+      color: #ffffff; /* White text color */
+      text-decoration: none;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+  }
+  
+  nav ul li a:hover {
+      color: #08f9bd; /* Change color on hover */
+  }
+  
+  nav ul li a.active {
+      font-weight: bold;
+      text-decoration: underline;
+  }
+  
+  
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
+    }
+    100% {
+      text-shadow: 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00;
+    }
+  }
+  
+  
+  /* Profile Image */
+  .profile-image {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    object-fit: cover;
+    z-index: 1;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .profile-image:hover {
+    box-shadow: 0 0 20px rgba(8, 249, 189, 0.8), 0 0 40px rgba(8, 249, 189, 0.6);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #222;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    nav ul li a.active {
+      border-bottom: 2px solid skyblue; /* Highlight active link */
+      color: #08f9bd; /* Optional: change active link color */
+      font-weight: bold; /* Optional: make it bold */
+    }
+    
+  
+    .picture-wrapper img {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .profile-image {
+      width: 300px;
+      height: 300px;
+      top: 50px;
+      right: 20px;
+    }
+  
+    .main-content h1 {
+      font-size: 2rem;
+    }
+  
+    .socials-wrapper {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #08f9bd; /* Blue button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .cta-button:hover {
+    background-color: #08f9bd; /* Darker blue when hovering */
+  }
+  
+  html {
+    scroll-behavior: smooth; /* Enable smooth scrolling for the entire page */
+  }
+  
+  .main-text {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .timeline {
+  
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px 9%;
+  }
+  
+  .timeline .timeline-row {
+    display: flex;
+    column-gap: 64px;
+    flex-wrap: wrap;
+  }
+  
+  .timeline-row .timeline-column {
+    flex: 1 1 320px;
+  }
+  
+  .timeline-column .title {
+    position: relative;
+    display: inline-block;
+    font-size: 28px;
+    margin: 32px 0 16px 30px;
+  }
+  
+  .timeline-column .timeline-box {
+    position: relative;
+    border-left: 2px solid #08f9bd;
+  }
+  
+  .timeline-box .timeline-content {
+    position: relative;
+    padding-left: 27px;
+  }
+  
+  .timeline-box .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10.5px;
+    width: 20px;
+    height: 20px;
+    background: #08f9bd;
+    border-radius: 50%;
+  }
+  
+  .timeline-content .content {
+    padding: 24px;
+    border: 2px solid #08f9bd;
+    border-radius: 8px;
+    margin-bottom: 32px;
+  }
+  
+  .timeline-content .content .year {
+    font-size: 16px;
+    color: #08f9bd;
+  }
+  
+  .timeline-content .content .year i {
+    margin-right: 8px;
+  }
+  
+  .timeline-content .content h3 {
+    font-size: 19px;
+    margin: 8px 0;
+  }
+  
+  .timeline-content .content p {
+    font-size: 16px;
+  }
+  .timeline-content .content:hover {
+    background-color: #303030; 
+    color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 105%;
+    height: 100%;
+    background: #202020;
+    animation: show-right 1s ease forwards;
+    animation-delay: calc(.5s * var(--i));
+  }
+  
+  @keyframes show-right {
+    100% {
+        width: 0;
+    }
+  }
+  
+  .bathala-image {
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    margin-bottom: 10px; /* Optional: Add some space below the image */
+    object-fit: cover; /* Ensures the image scales properly */
+  }
+  
+  .TODA-image {
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    margin-bottom: 10px; /* Optional: Add some space below the image */
+    object-fit: cover; /* Ensures the image scales properly */
+  }
+  
+  .timeline {
+    color: white; /* Default color for all text inside the timeline section */
+  }
+  
+  .timeline .year, 
+  .timeline h3, 
+  .timeline p, 
+  .timeline .title, 
+  .timeline-row h2 {
+    color: white; /* Ensure all specific text elements are white */
+  }
+  
+  .timeline .year {
+    font-weight: bold; /* Optional: Make the year bold for emphasis */
+  }
+  
+  .timeline p {
+    margin-top: 5px; /* Optional: Add spacing for better readability */
+  }
+  
+  
+  
+  
+  .skills-wrapper {
+    text-align: center;
+    color: white;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  .skills-wrapper h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px black;
+  }
+  
+  .skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .skills-list li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: left;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    line-height: 1.5;
+  }
+  
+  .skills-list li strong {
+    color: rgb(8, 249, 189); /* Highlight key points in your preferred color */
+  }
+  
+  
+  .contact-section {
+    padding: 50px 20px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+  }
+  
+  .contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #f39c12;
+  }
+  
+  .contact-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .contact-item {
+    flex: 1 1 300px;
+    text-align: center;
+  }
+  
+  .contact-item i {
+    font-size: 2em;
+    color: #08f9bd;
+    margin-bottom: 10px;
+  }
+  
+  .contact-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .contact-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f39c12;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #d35400;
+  }
+  
+  
+  .skill-container {
+    width: 600px;
+    height: 400px;
+    padding: 70px 90px;
+    margin: 0 auto; /* Center align the container */
+    background-color: #222; /* Optional background for better visibility */
+    border-radius: 10px;
+  }
+  
+  .skill-heading {
+    text-decoration: underline;
+    text-align: center;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+    color: white; /* Make the heading white */
+  }
+  
+  .technical-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .bars {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adds space between the icon/text and the progress bar */
+  }
+  
+  .bars .info {
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    width: 100px; /* Make sure text is aligned correctly */
+  }
+  
+  .bars .progress-line {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: #333; /* Darker background for the progress line */
+    border-radius: 5px;
+    animation: animate 1s cubic-bezier(1,0,0,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  
+  @keyframes animate {
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  
+  .bars .progress-line span {
+    height: 100%;
+    background-color: #08f9bd;
+    position: absolute;
+    border-radius: 10px;
+    animation: 1s 1s cubic-bezier(1,0,0,1) forwards;
+    transform: scaleX();
+  }
+  
+  .progress-line.html span {
+    width: 45%;
+  }
+  
+  .progress-line.css span {
+    width: 30%;
+  }
+  
+  .progress-line.javascript span {
+    width: 65%;
+  }
+  
+  .progress-line.java span {
+    width: 85%;
+  }
+  
+  .progress-line.php span {
+    width: 50%;
+  }
+  
+  .progress-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 5px;
+    top: -30px;
+    right: -20px;
+    animation: showText 0.5s 1.1s linear forwards;
+    opacity: 0;
+  }
+  
+  .progress-line.html span::after {
+    content: '45%';
+  }
+  
+  .progress-line.css span::after {
+    content: '30%';
+  }
+  
+  .progress-line.javascript span::after {
+    content: '65%';
+  }
+  
+  .progress-line.java span::after {
+    content: '85%';
+  }
+  
+  .progress-line.php span::after {
+    content: '50%';
+  }
+  
+  .progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.1s linear forwards;
+    opacity: 0;
+  }
+  
+  @keyframes showText {
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Projects Section */
+  .projects {
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .project-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .project-heading {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 40px;
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+  }
+  
+  .project-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .team-card {
+    background-color: #333;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px; /* Adjust card size */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .team-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Increase shadow effect */
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Space between image and text */
+  }
+  
+  .team-container h3 {
+    font-size: 1.6rem;
+    color: #08f9bd;
+    margin-bottom: 10px;
+  }
+  
+  .team-title {
+    font-size: 1.2rem;
+    color: #08f9bd; /* Highlight color for project title */
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .project-card {
+      width: 100%;
+      max-width: 400px; /* Limit card width on mobile */
+    }
+    
+    .project-heading {
+      font-size: 2rem;
+    }
+    
+    .project-container {
+      padding: 10px;
+    }
+  }
+  
+  
